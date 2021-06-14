@@ -18,7 +18,7 @@ class MentionDetectionHead(nn.Module):
     def forward(self, input: torch.Tensor):
         # input shape: [batch_size, embedding_dim]
         output = self.linear(input)
-        return F.softmax(output, dim=1)
+        return F.log_softmax(output, dim=1)
 
 
 
