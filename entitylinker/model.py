@@ -19,7 +19,9 @@ class MentionDetectionHead(nn.Module):
         self.linear4 = nn.Linear(256, 3)
 
         # Define proportion or neurons to dropout
-        self.dropout = nn.Dropout(0.10)        
+        self.dropout = nn.Dropout(0.10)   
+
+        self.lsoftmax = nn.LogSoftmax(dim=2)
         
     def forward(self, input: torch.Tensor):
         # input shape: [batch_size, seq_len]
@@ -29,7 +31,7 @@ class MentionDetectionHead(nn.Module):
         output = self.dropout(output)
         output = F.relu(self.linear4(output))        
         # output shape: [batch_size, seq_len, 3]
-        return F.log_softmax(output, dim=2)
+        return self.lsoftmax(output)
 
 
 
