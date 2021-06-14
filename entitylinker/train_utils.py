@@ -234,7 +234,7 @@ def compute_metrics(metrics, micro_conf, macro_confs):
 
 
 # Train!!
-def train(model, train_loader, optimizer, criterion, epoch):
+def train(model, train_loader, optimizer, criterion, epoch, pretrained_entity_embeddings, device):
 
     model.train()
     running_loss = 0.0
@@ -266,7 +266,7 @@ def train(model, train_loader, optimizer, criterion, epoch):
             running_loss = 0.0
     print('Finished Training')
 
-def evaluate(model, test_loader, optimizer, criterion, epoch):
+def evaluate(model, test_loader, optimizer, criterion, epoch, pretrained_entity_embeddings, device):
     
     model.eval()
     total_loss = 0.0
