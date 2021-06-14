@@ -56,6 +56,7 @@ if torch.cuda.is_available():
 # entity_embedding_model = "/home/vs428/project/MedMentions/full/pretraining5/model_epoch20.bin"
 # entity_embedding_metadata = "/home/vs428/project/MedMentions/full/pretraining5/metadata.json"
 
+
 input_data_file = args.input_data_file
 train_pmids_file = args.train_pmids
 test_pmids_file = args.test_pmids
