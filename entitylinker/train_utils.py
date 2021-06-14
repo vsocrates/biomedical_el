@@ -270,6 +270,11 @@ def evaluate(model, test_loader, optimizer, criterion, epoch, pretrained_entity_
     
     model.eval()
     total_loss = 0.0
+    nb_classes = 2    
+    total_micro_conf_mat = torch.zeros(nb_classes, nb_classes)
+    # micro_confusion_matrix [[TP, FN], [FP, TN]]
+    total_macro_conf_mat = []
+
     with torch.no_grad():
         running_loss = 0.0
         
@@ -294,13 +299,8 @@ def evaluate(model, test_loader, optimizer, criterion, epoch, pretrained_entity_
 
 
             micro_conf_mat, macro_conf_mat = compute_conf_matrices(mention_pred, entity_pred, bio_tags, entity_ids, pretrained_entity_embeddings)
-            micro_metrics, macro_metrics = compute_metrics(["precision", "recall","f1"], micro_conf_mat, macro_conf_mat)
-            print('-' * 89)
-            print(f"Micro-Precision: {micro_metrics['precision']}, Macro-Precision: {macro_metrics['precision']}\n")
-            print(f"Micro-Recall: {micro_metrics['recall']}, Macro-Recall: {macro_metrics['recall']}\n")
-            print(f"Micro-F1: {micro_metrics['f1']}, Macro-F1: {macro_metrics['f1']}\n")    
-            print('-' * 89)
-
+            total_micro_conf_mat += micro_conf_mat
+            total_macro_conf_mat.extend(macro_conf_mat)
 
             running_loss += loss.item()
             total_loss += loss.item()
@@ -308,5 +308,14 @@ def evaluate(model, test_loader, optimizer, criterion, epoch, pretrained_entity_
                 print('[%d, %5d] test loss: %.3f' %
                       (epoch + 1, i + 1, running_loss / 5))
                 running_loss = 0.0
-        # whatever i is at is the len of test_loader
+
+
+        micro_metrics, macro_metrics = compute_metrics(["precision", "recall","f1"], total_micro_conf_mat, total_macro_conf_mat)
+        print('-' * 89)
+        print(f"Micro-Precision: {micro_metrics['precision']}, Macro-Precision: {macro_metrics['precision']}\n")
+        print(f"Micro-Recall: {micro_metrics['recall']}, Macro-Recall: {macro_metrics['recall']}\n")
+        print(f"Micro-F1: {micro_metrics['f1']}, Macro-F1: {macro_metrics['f1']}\n")    
+        print('-' * 89)
+
+        # whatever i is at the end is the len of test_loader
         return total_loss / i
