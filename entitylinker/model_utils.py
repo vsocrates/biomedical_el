@@ -8,8 +8,8 @@ from typing import Dict
 import click
 import torch
 
-from lukemodel import LukeConfig
-from entity_vocab import EntityVocab
+from .lukemodel import LukeConfig
+from .entity_vocab import EntityVocab
 from transformers import AutoTokenizer
 
 MODEL_FILE = "pytorch_model.bin"

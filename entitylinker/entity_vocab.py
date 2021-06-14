@@ -11,7 +11,7 @@ from multiprocessing.pool import Pool
 import click
 from tqdm import tqdm
 # from wikipedia2vec.dump_db import DumpDB
-from medmentions_db import MedMentionsDB
+from .medmentions_db import MedMentionsDB
 
 
 PAD_TOKEN = "[PAD]"

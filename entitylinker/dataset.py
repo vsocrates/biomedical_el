@@ -9,10 +9,11 @@ import numpy as np
 from torch.nn.utils.rnn import pad_sequence, pack_padded_sequence
 
 class MedMentionsDataset(Dataset):
-    def __init__(self, file_path: str, pmids_path:str, tokenizer: BertTokenizer, entity_vocab_file: str = None, max_length: int = 512, stride:int = 0):
+    def __init__(self, file_path: str, pmids_path:str, tokenizer: BertTokenizer, entity_vocab_file: str = None, max_length: int = 512, stride:int = 0, first_token_ent_only = False):
         self.file_path = file_path
         self.stride = stride 
         self.max_length = max_length
+        self.first_token_ent_only = first_token_ent_only
         
         with open(pmids_path) as f:
             self.pmids = [pmid for pmid in f.read().splitlines()]
@@ -87,9 +88,11 @@ class MedMentionsDataset(Dataset):
 
                 # if we get here, we are already in a span, so we want to use an I tag
                 elif (token_span_start >= entity_start) and (token_span_end <= entity_end):
-                    if self.entity_vocab:
+                    if self.entity_vocab and not self.first_token_ent_only:
                         chunk_entity_ids.append(self.entity_vocab[entity[4]]['id'])
-
+                    elif self.entity_vocab:
+                        chunk_entity_ids.append(-1)
+                        
                     chunk_bio_tags.append(1)
                     in_span = True
 
@@ -135,8 +138,8 @@ class MedMentionsDataset(Dataset):
             bio_tags.append(chunk_bio_tags)
             
             # assert sum([1 for val in chunk_bio_tags if val != 2]) == np.sum(np.array(chunk_entity_ids) >= 0), f"There was an issue in the BIO tagging: {[1 for val in chunk_bio_tags if val == 0]},{np.unique(chunk_entity_ids)}"
-
-            assert sum([1 for val in chunk_bio_tags if val != 2]) == sum([1 for ent in chunk_entity_ids if ent != -1]), f"There was an issue in the BIO tagging: {[1 for val in chunk_bio_tags if val == 0]},{np.unique(chunk_entity_ids)}"
+            if not self.first_token_ent_only:
+                assert sum([1 for val in chunk_bio_tags if val != 2]) == sum([1 for ent in chunk_entity_ids if ent != -1]), f"There was an issue in the BIO tagging: {[1 for val in chunk_bio_tags if val == 0]},{np.unique(chunk_entity_ids)}"
         
         # print(tokenized_text['attention_mask'].shape)
         # print(torch.LongTensor(bio_tags))
@@ -224,14 +227,14 @@ class Collater(object):
     tokenized_text_out['token_type_ids'] = torch.cat(all_token_type_ids)
     tokenized_text_out['attention_mask'] = torch.cat(all_attention_mask)
     
-    print(tokenized_text_out['attention_mask'].shape)
+    # print(tokenized_text_out['attention_mask'].shape)
 
     # bio_tags = pad_sequence(bio_tags, batch_first=True, padding_value=2)
     # entity_ids = pad_sequence(entity_ids, batch_first=True, padding_value=-1)
     bio_tags = torch.cat(bio_tags)
     entity_ids = torch.cat(entity_ids)
 
-    print(entity_ids.shape)
+    # print(entity_ids.shape)
     
     # now you can apply your sequence padding to the whole batch.
     # tokenized_text = self.hf_collater(tokenized_text)
