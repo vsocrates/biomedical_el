@@ -1,0 +1,1409 @@
+Restoring modules from user's fosscuda111, for system: "farnam-rhel7"
+/home/vs428/project/MedMentions/full/pretraining5/entity_vocab.jsonl
+Some weights of the model checkpoint at microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract were not used when initializing BertModel: ['cls.predictions.transform.LayerNorm.bias', 'cls.predictions.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.decoder.weight', 'cls.predictions.transform.dense.weight', 'cls.predictions.decoder.bias', 'cls.seq_relationship.bias', 'cls.seq_relationship.weight', 'cls.predictions.transform.dense.bias']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+0
+<torch.cuda.device object at 0x2ad24f24bb20>
+1
+GeForce GTX 1080 Ti
+[1,     5] train loss: 1.007
+[1,    10] train loss: 1.005
+[1,    15] train loss: 0.999
+[1,    20] train loss: 0.999
+[1,    25] train loss: 0.995
+[1,    30] train loss: 0.992
+[1,    35] train loss: 0.989
+[1,    40] train loss: 0.991
+[1,    45] train loss: 0.986
+[1,    50] train loss: 0.983
+[1,    55] train loss: 0.980
+[1,    60] train loss: 0.975
+[1,    65] train loss: 0.971
+[1,    70] train loss: 0.964
+[1,    75] train loss: 0.959
+[1,    80] train loss: 0.959
+[1,    85] train loss: 0.955
+[1,    90] train loss: 0.949
+[1,    95] train loss: 0.953
+[1,   100] train loss: 0.944
+[1,   105] train loss: 0.948
+[1,   110] train loss: 0.943
+[1,   115] train loss: 0.942
+[1,   120] train loss: 0.935
+[1,   125] train loss: 0.943
+[1,   130] train loss: 0.931
+[1,   135] train loss: 0.926
+[1,   140] train loss: 0.926
+[1,   145] train loss: 0.929
+[1,   150] train loss: 0.921
+[1,   155] train loss: 0.918
+[1,   160] train loss: 0.917
+[1,   165] train loss: 0.918
+Finished Training
+[1,     5] test loss: 0.910
+[1,    10] test loss: 0.909
+[1,    15] test loss: 0.905
+[1,    20] test loss: 0.902
+[1,    25] test loss: 0.904
+[1,    30] test loss: 0.907
+[1,    35] test loss: 0.908
+[1,    40] test loss: 0.906
+[1,    45] test loss: 0.906
+[1,    50] test loss: 0.909
+[1,    55] test loss: 0.906
+-----------------------------------------------------------------------------------------
+Micro-Precision: 0.015968618914484978, Macro-Precision: nan
+
+Micro-Recall: 0.016798852011561394, Macro-Recall: nan
+
+Micro-F1: 0.016373218968510628, Macro-F1: nan
+
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+| end of epoch   0 | time: 129.39s | valid loss  0.92 | valid ppl     2.52
+-----------------------------------------------------------------------------------------
+[2,     5] train loss: 0.915
+[2,    10] train loss: 0.909
+[2,    15] train loss: 0.913
+[2,    20] train loss: 0.912
+[2,    25] train loss: 0.903
+[2,    30] train loss: 0.900
+[2,    35] train loss: 0.909
+[2,    40] train loss: 0.901
+[2,    45] train loss: 0.896
+[2,    50] train loss: 0.896
+[2,    55] train loss: 0.900
+[2,    60] train loss: 0.894
+[2,    65] train loss: 0.896
+[2,    70] train loss: 0.889
+[2,    75] train loss: 0.896
+[2,    80] train loss: 0.890
+[2,    85] train loss: 0.890
+[2,    90] train loss: 0.885
+[2,    95] train loss: 0.891
+[2,   100] train loss: 0.883
+[2,   105] train loss: 0.887
+[2,   110] train loss: 0.897
+[2,   115] train loss: 0.881
+[2,   120] train loss: 0.878
+[2,   125] train loss: 0.877
+[2,   130] train loss: 0.878
+[2,   135] train loss: 0.882
+[2,   140] train loss: 0.877
+[2,   145] train loss: 0.876
+[2,   150] train loss: 0.876
+[2,   155] train loss: 0.875
+[2,   160] train loss: 0.872
+[2,   165] train loss: 0.874
+Finished Training
+[2,     5] test loss: 0.850
+[2,    10] test loss: 0.857
+[2,    15] test loss: 0.859
+[2,    20] test loss: 0.858
+[2,    25] test loss: 0.858
+[2,    30] test loss: 0.855
+[2,    35] test loss: 0.862
+[2,    40] test loss: 0.856
+[2,    45] test loss: 0.858
+[2,    50] test loss: 0.869
+[2,    55] test loss: 0.854
+-----------------------------------------------------------------------------------------
+Micro-Precision: 0.07826589792966843, Macro-Precision: nan
+
+Micro-Recall: 0.08318579196929932, Macro-Recall: nan
+
+Micro-F1: 0.08065088093280792, Macro-F1: nan
+
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+| end of epoch   1 | time: 131.36s | valid loss  0.87 | valid ppl     2.40
+-----------------------------------------------------------------------------------------
+[3,     5] train loss: 0.866
+[3,    10] train loss: 0.861
+[3,    15] train loss: 0.870
+[3,    20] train loss: 0.863
+[3,    25] train loss: 0.866
+[3,    30] train loss: 0.864
+[3,    35] train loss: 0.860
+[3,    40] train loss: 0.863
+[3,    45] train loss: 0.857
+[3,    50] train loss: 0.854
+[3,    55] train loss: 0.853
+[3,    60] train loss: 0.858
+[3,    65] train loss: 0.855
+[3,    70] train loss: 0.856
+[3,    75] train loss: 0.856
+[3,    80] train loss: 0.846
+[3,    85] train loss: 0.848
+[3,    90] train loss: 0.850
+[3,    95] train loss: 0.854
+[3,   100] train loss: 0.848
+[3,   105] train loss: 0.855
+[3,   110] train loss: 0.846
+[3,   115] train loss: 0.845
+[3,   120] train loss: 0.851
+[3,   125] train loss: 0.847
+[3,   130] train loss: 0.851
+[3,   135] train loss: 0.846
+[3,   140] train loss: 0.848
+[3,   145] train loss: 0.843
+[3,   150] train loss: 0.840
+[3,   155] train loss: 0.845
+[3,   160] train loss: 0.842
+[3,   165] train loss: 0.840
+Finished Training
+[3,     5] test loss: 0.822
+[3,    10] test loss: 0.818
+[3,    15] test loss: 0.822
+[3,    20] test loss: 0.813
+[3,    25] test loss: 0.822
+[3,    30] test loss: 0.821
+[3,    35] test loss: 0.831
+[3,    40] test loss: 0.817
+[3,    45] test loss: 0.828
+[3,    50] test loss: 0.817
+[3,    55] test loss: 0.824
+-----------------------------------------------------------------------------------------
+Micro-Precision: 0.12958559393882751, Macro-Precision: nan
+
+Micro-Recall: 0.14116597175598145, Macro-Recall: nan
+
+Micro-F1: 0.13512812554836273, Macro-F1: nan
+
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+| end of epoch   2 | time: 132.59s | valid loss  0.84 | valid ppl     2.31
+-----------------------------------------------------------------------------------------
+[4,     5] train loss: 0.832
+[4,    10] train loss: 0.828
+[4,    15] train loss: 0.842
+[4,    20] train loss: 0.822
+[4,    25] train loss: 0.833
+[4,    30] train loss: 0.825
+[4,    35] train loss: 0.831
+[4,    40] train loss: 0.832
+[4,    45] train loss: 0.833
+[4,    50] train loss: 0.829
+[4,    55] train loss: 0.826
+[4,    60] train loss: 0.830
+[4,    65] train loss: 0.828
+[4,    70] train loss: 0.824
+[4,    75] train loss: 0.833
+[4,    80] train loss: 0.824
+[4,    85] train loss: 0.838
+[4,    90] train loss: 0.830
+[4,    95] train loss: 0.826
+[4,   100] train loss: 0.822
+[4,   105] train loss: 0.820
+[4,   110] train loss: 0.824
+[4,   115] train loss: 0.816
+[4,   120] train loss: 0.823
+[4,   125] train loss: 0.816
+[4,   130] train loss: 0.815
+[4,   135] train loss: 0.819
+[4,   140] train loss: 0.814
+[4,   145] train loss: 0.814
+[4,   150] train loss: 0.815
+[4,   155] train loss: 0.810
+[4,   160] train loss: 0.815
+[4,   165] train loss: 0.808
+Finished Training
+[4,     5] test loss: 0.807
+[4,    10] test loss: 0.791
+[4,    15] test loss: 0.803
+[4,    20] test loss: 0.794
+[4,    25] test loss: 0.788
+[4,    30] test loss: 0.790
+[4,    35] test loss: 0.792
+[4,    40] test loss: 0.789
+[4,    45] test loss: 0.791
+[4,    50] test loss: 0.795
+[4,    55] test loss: 0.795
+-----------------------------------------------------------------------------------------
+Micro-Precision: 0.1675344556570053, Macro-Precision: nan
+
+Micro-Recall: 0.18645556271076202, Macro-Recall: nan
+
+Micro-F1: 0.17648932337760925, Macro-F1: nan
+
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+| end of epoch   3 | time: 133.08s | valid loss  0.81 | valid ppl     2.25
+-----------------------------------------------------------------------------------------
+[5,     5] train loss: 0.803
+[5,    10] train loss: 0.805
+[5,    15] train loss: 0.802
+[5,    20] train loss: 0.803
+[5,    25] train loss: 0.805
+[5,    30] train loss: 0.809
+[5,    35] train loss: 0.800
+[5,    40] train loss: 0.806
+[5,    45] train loss: 0.806
+[5,    50] train loss: 0.802
+[5,    55] train loss: 0.803
+[5,    60] train loss: 0.811
+[5,    65] train loss: 0.803
+[5,    70] train loss: 0.805
+[5,    75] train loss: 0.810
+[5,    80] train loss: 0.809
+[5,    85] train loss: 0.799
+[5,    90] train loss: 0.807
+[5,    95] train loss: 0.791
+[5,   100] train loss: 0.794
+[5,   105] train loss: 0.795
+[5,   110] train loss: 0.800
+[5,   115] train loss: 0.797
+[5,   120] train loss: 0.803
+[5,   125] train loss: 0.802
+[5,   130] train loss: 0.806
+[5,   135] train loss: 0.812
+[5,   140] train loss: 0.797
+[5,   145] train loss: 0.803
+[5,   150] train loss: 0.800
+[5,   155] train loss: 0.801
+[5,   160] train loss: 0.792
+[5,   165] train loss: 0.798
+Finished Training
+[5,     5] test loss: 0.769
+[5,    10] test loss: 0.772
+[5,    15] test loss: 0.781
+[5,    20] test loss: 0.768
+[5,    25] test loss: 0.781
+[5,    30] test loss: 0.775
+[5,    35] test loss: 0.775
+[5,    40] test loss: 0.771
+[5,    45] test loss: 0.783
+[5,    50] test loss: 0.767
+[5,    55] test loss: 0.776
+-----------------------------------------------------------------------------------------
+Micro-Precision: 0.1936754286289215, Macro-Precision: nan
+
+Micro-Recall: 0.2201995998620987, Macro-Recall: nan
+
+Micro-F1: 0.20608757436275482, Macro-F1: nan
+
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+| end of epoch   4 | time: 132.84s | valid loss  0.79 | valid ppl     2.20
+-----------------------------------------------------------------------------------------
+[6,     5] train loss: 0.800
+[6,    10] train loss: 0.787
+[6,    15] train loss: 0.786
+[6,    20] train loss: 0.781
+[6,    25] train loss: 0.802
+[6,    30] train loss: 0.788
+[6,    35] train loss: 0.784
+[6,    40] train loss: 0.783
+[6,    45] train loss: 0.793
+[6,    50] train loss: 0.788
+[6,    55] train loss: 0.788
+[6,    60] train loss: 0.796
+[6,    65] train loss: 0.782
+[6,    70] train loss: 0.780
+[6,    75] train loss: 0.790
+[6,    80] train loss: 0.778
+[6,    85] train loss: 0.783
+[6,    90] train loss: 0.782
+[6,    95] train loss: 0.783
+[6,   100] train loss: 0.791
+[6,   105] train loss: 0.789
+[6,   110] train loss: 0.783
+[6,   115] train loss: 0.784
+[6,   120] train loss: 0.777
+[6,   125] train loss: 0.773
+[6,   130] train loss: 0.774
+[6,   135] train loss: 0.781
+[6,   140] train loss: 0.781
+[6,   145] train loss: 0.790
+[6,   150] train loss: 0.794
+[6,   155] train loss: 0.783
+[6,   160] train loss: 0.766
+[6,   165] train loss: 0.774
+Finished Training
+[6,     5] test loss: 0.774
+[6,    10] test loss: 0.757
+[6,    15] test loss: 0.760
+[6,    20] test loss: 0.759
+[6,    25] test loss: 0.764
+[6,    30] test loss: 0.762
+[6,    35] test loss: 0.766
+[6,    40] test loss: 0.754
+[6,    45] test loss: 0.752
+[6,    50] test loss: 0.751
+[6,    55] test loss: 0.755
+-----------------------------------------------------------------------------------------
+Micro-Precision: 0.21547041833400726, Macro-Precision: nan
+
+Micro-Recall: 0.2385648638010025, Macro-Recall: nan
+
+Micro-F1: 0.22643029689788818, Macro-F1: nan
+
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+| end of epoch   5 | time: 132.95s | valid loss  0.77 | valid ppl     2.17
+-----------------------------------------------------------------------------------------
+[7,     5] train loss: 0.773
+[7,    10] train loss: 0.777
+[7,    15] train loss: 0.777
+[7,    20] train loss: 0.778
+[7,    25] train loss: 0.777
+[7,    30] train loss: 0.765
+[7,    35] train loss: 0.771
+[7,    40] train loss: 0.769
+[7,    45] train loss: 0.773
+[7,    50] train loss: 0.766
+[7,    55] train loss: 0.775
+[7,    60] train loss: 0.771
+[7,    65] train loss: 0.762
+[7,    70] train loss: 0.771
+[7,    75] train loss: 0.772
+[7,    80] train loss: 0.776
+[7,    85] train loss: 0.766
+[7,    90] train loss: 0.775
+[7,    95] train loss: 0.761
+[7,   100] train loss: 0.771
+[7,   105] train loss: 0.764
+[7,   110] train loss: 0.763
+[7,   115] train loss: 0.768
+[7,   120] train loss: 0.778
+[7,   125] train loss: 0.777
+[7,   130] train loss: 0.769
+[7,   135] train loss: 0.771
+[7,   140] train loss: 0.755
+[7,   145] train loss: 0.751
+[7,   150] train loss: 0.770
+[7,   155] train loss: 0.778
+[7,   160] train loss: 0.759
+[7,   165] train loss: 0.760
+Finished Training
+[7,     5] test loss: 0.747
+[7,    10] test loss: 0.751
+[7,    15] test loss: 0.747
+[7,    20] test loss: 0.751
+[7,    25] test loss: 0.751
+[7,    30] test loss: 0.744
+[7,    35] test loss: 0.747
+[7,    40] test loss: 0.741
+[7,    45] test loss: 0.749
+[7,    50] test loss: 0.739
+[7,    55] test loss: 0.735
+-----------------------------------------------------------------------------------------
+Micro-Precision: 0.22935451567173004, Macro-Precision: nan
+
+Micro-Recall: 0.2527437210083008, Macro-Recall: nan
+
+Micro-F1: 0.24048174917697906, Macro-F1: nan
+
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+| end of epoch   6 | time: 133.11s | valid loss  0.76 | valid ppl     2.14
+-----------------------------------------------------------------------------------------
+[8,     5] train loss: 0.757
+[8,    10] train loss: 0.755
+[8,    15] train loss: 0.754
+[8,    20] train loss: 0.763
+[8,    25] train loss: 0.771
+[8,    30] train loss: 0.750
+[8,    35] train loss: 0.764
+[8,    40] train loss: 0.749
+[8,    45] train loss: 0.751
+[8,    50] train loss: 0.754
+[8,    55] train loss: 0.754
+[8,    60] train loss: 0.754
+[8,    65] train loss: 0.759
+[8,    70] train loss: 0.759
+[8,    75] train loss: 0.761
+[8,    80] train loss: 0.759
+[8,    85] train loss: 0.753
+[8,    90] train loss: 0.755
+[8,    95] train loss: 0.758
+[8,   100] train loss: 0.757
+[8,   105] train loss: 0.752
+[8,   110] train loss: 0.758
+[8,   115] train loss: 0.756
+[8,   120] train loss: 0.758
+[8,   125] train loss: 0.760
+[8,   130] train loss: 0.751
+[8,   135] train loss: 0.752
+[8,   140] train loss: 0.754
+[8,   145] train loss: 0.761
+[8,   150] train loss: 0.752
+[8,   155] train loss: 0.753
+[8,   160] train loss: 0.749
+[8,   165] train loss: 0.762
+Finished Training
+[8,     5] test loss: 0.734
+[8,    10] test loss: 0.740
+[8,    15] test loss: 0.737
+[8,    20] test loss: 0.728
+[8,    25] test loss: 0.742
+[8,    30] test loss: 0.725
+[8,    35] test loss: 0.738
+[8,    40] test loss: 0.736
+[8,    45] test loss: 0.737
+[8,    50] test loss: 0.737
+[8,    55] test loss: 0.724
+-----------------------------------------------------------------------------------------
+Micro-Precision: 0.2456771284341812, Macro-Precision: nan
+
+Micro-Recall: 0.26485520601272583, Macro-Recall: nan
+
+Micro-F1: 0.25490596890449524, Macro-F1: nan
+
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+| end of epoch   7 | time: 133.19s | valid loss  0.75 | valid ppl     2.11
+-----------------------------------------------------------------------------------------
+[9,     5] train loss: 0.749
+[9,    10] train loss: 0.743
+[9,    15] train loss: 0.751
+[9,    20] train loss: 0.735
+[9,    25] train loss: 0.764
+[9,    30] train loss: 0.744
+[9,    35] train loss: 0.751
+[9,    40] train loss: 0.742
+[9,    45] train loss: 0.741
+[9,    50] train loss: 0.742
+[9,    55] train loss: 0.750
+[9,    60] train loss: 0.737
+[9,    65] train loss: 0.753
+[9,    70] train loss: 0.746
+[9,    75] train loss: 0.743
+[9,    80] train loss: 0.736
+[9,    85] train loss: 0.746
+[9,    90] train loss: 0.739
+[9,    95] train loss: 0.751
+[9,   100] train loss: 0.735
+[9,   105] train loss: 0.750
+[9,   110] train loss: 0.735
+[9,   115] train loss: 0.757
+[9,   120] train loss: 0.736
+[9,   125] train loss: 0.747
+[9,   130] train loss: 0.748
+[9,   135] train loss: 0.740
+[9,   140] train loss: 0.748
+[9,   145] train loss: 0.736
+[9,   150] train loss: 0.742
+[9,   155] train loss: 0.746
+[9,   160] train loss: 0.746
+[9,   165] train loss: 0.740
+Finished Training
+[9,     5] test loss: 0.718
+[9,    10] test loss: 0.732
+[9,    15] test loss: 0.733
+[9,    20] test loss: 0.712
+[9,    25] test loss: 0.724
+[9,    30] test loss: 0.730
+[9,    35] test loss: 0.728
+[9,    40] test loss: 0.728
+[9,    45] test loss: 0.723
+[9,    50] test loss: 0.720
+[9,    55] test loss: 0.732
+-----------------------------------------------------------------------------------------
+Micro-Precision: 0.254194974899292, Macro-Precision: nan
+
+Micro-Recall: 0.27862808108329773, Macro-Recall: nan
+
+Micro-F1: 0.26585131883621216, Macro-F1: nan
+
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+| end of epoch   8 | time: 132.67s | valid loss  0.74 | valid ppl     2.09
+-----------------------------------------------------------------------------------------
+[10,     5] train loss: 0.741
+[10,    10] train loss: 0.735
+[10,    15] train loss: 0.737
+[10,    20] train loss: 0.737
+[10,    25] train loss: 0.739
+[10,    30] train loss: 0.725
+[10,    35] train loss: 0.742
+[10,    40] train loss: 0.734
+[10,    45] train loss: 0.740
+[10,    50] train loss: 0.737
+[10,    55] train loss: 0.732
+[10,    60] train loss: 0.728
+[10,    65] train loss: 0.732
+[10,    70] train loss: 0.744
+[10,    75] train loss: 0.733
+[10,    80] train loss: 0.736
+[10,    85] train loss: 0.737
+[10,    90] train loss: 0.742
+[10,    95] train loss: 0.743
+[10,   100] train loss: 0.735
+[10,   105] train loss: 0.729
+[10,   110] train loss: 0.738
+[10,   115] train loss: 0.737
+[10,   120] train loss: 0.734
+[10,   125] train loss: 0.717
+[10,   130] train loss: 0.725
+[10,   135] train loss: 0.725
+[10,   140] train loss: 0.727
+[10,   145] train loss: 0.727
+[10,   150] train loss: 0.736
+[10,   155] train loss: 0.730
+[10,   160] train loss: 0.734
+[10,   165] train loss: 0.732
+Finished Training
+[10,     5] test loss: 0.720
+[10,    10] test loss: 0.726
+[10,    15] test loss: 0.701
+[10,    20] test loss: 0.714
+[10,    25] test loss: 0.712
+[10,    30] test loss: 0.709
+[10,    35] test loss: 0.729
+[10,    40] test loss: 0.721
+[10,    45] test loss: 0.717
+[10,    50] test loss: 0.707
+[10,    55] test loss: 0.721
+-----------------------------------------------------------------------------------------
+Micro-Precision: 0.26363927125930786, Macro-Precision: nan
+
+Micro-Recall: 0.2779509127140045, Macro-Recall: nan
+
+Micro-F1: 0.27060601115226746, Macro-F1: nan
+
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+| end of epoch   9 | time: 131.78s | valid loss  0.73 | valid ppl     2.07
+-----------------------------------------------------------------------------------------
+[11,     5] train loss: 0.720
+[11,    10] train loss: 0.723
+[11,    15] train loss: 0.733
+[11,    20] train loss: 0.726
+[11,    25] train loss: 0.725
+[11,    30] train loss: 0.722
+[11,    35] train loss: 0.722
+[11,    40] train loss: 0.719
+[11,    45] train loss: 0.733
+[11,    50] train loss: 0.721
+[11,    55] train loss: 0.730
+[11,    60] train loss: 0.711
+[11,    65] train loss: 0.738
+[11,    70] train loss: 0.730
+[11,    75] train loss: 0.728
+[11,    80] train loss: 0.737
+[11,    85] train loss: 0.731
+[11,    90] train loss: 0.719
+[11,    95] train loss: 0.723
+[11,   100] train loss: 0.723
+[11,   105] train loss: 0.720
+[11,   110] train loss: 0.720
+[11,   115] train loss: 0.719
+[11,   120] train loss: 0.727
+[11,   125] train loss: 0.719
+[11,   130] train loss: 0.727
+[11,   135] train loss: 0.718
+[11,   140] train loss: 0.724
+[11,   145] train loss: 0.719
+[11,   150] train loss: 0.731
+[11,   155] train loss: 0.716
+[11,   160] train loss: 0.721
+[11,   165] train loss: 0.723
+Finished Training
+[11,     5] test loss: 0.701
+[11,    10] test loss: 0.705
+[11,    15] test loss: 0.720
+[11,    20] test loss: 0.695
+[11,    25] test loss: 0.724
+[11,    30] test loss: 0.702
+[11,    35] test loss: 0.704
+[11,    40] test loss: 0.712
+[11,    45] test loss: 0.703
+[11,    50] test loss: 0.713
+[11,    55] test loss: 0.716
+-----------------------------------------------------------------------------------------
+Micro-Precision: 0.2682355046272278, Macro-Precision: nan
+
+Micro-Recall: 0.30304935574531555, Macro-Recall: nan
+
+Micro-F1: 0.28458166122436523, Macro-F1: nan
+
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+| end of epoch  10 | time: 133.00s | valid loss  0.72 | valid ppl     2.06
+-----------------------------------------------------------------------------------------
+[12,     5] train loss: 0.716
+[12,    10] train loss: 0.716
+[12,    15] train loss: 0.713
+[12,    20] train loss: 0.721
+[12,    25] train loss: 0.720
+[12,    30] train loss: 0.724
+[12,    35] train loss: 0.720
+[12,    40] train loss: 0.718
+[12,    45] train loss: 0.718
+[12,    50] train loss: 0.728
+[12,    55] train loss: 0.720
+[12,    60] train loss: 0.708
+[12,    65] train loss: 0.717
+[12,    70] train loss: 0.712
+[12,    75] train loss: 0.719
+[12,    80] train loss: 0.711
+[12,    85] train loss: 0.713
+[12,    90] train loss: 0.709
+[12,    95] train loss: 0.712
+[12,   100] train loss: 0.716
+[12,   105] train loss: 0.721
+[12,   110] train loss: 0.717
+[12,   115] train loss: 0.711
+[12,   120] train loss: 0.719
+[12,   125] train loss: 0.712
+[12,   130] train loss: 0.726
+[12,   135] train loss: 0.701
+[12,   140] train loss: 0.706
+[12,   145] train loss: 0.712
+[12,   150] train loss: 0.703
+[12,   155] train loss: 0.726
+[12,   160] train loss: 0.710
+[12,   165] train loss: 0.719
+Finished Training
+[12,     5] test loss: 0.703
+[12,    10] test loss: 0.689
+[12,    15] test loss: 0.704
+[12,    20] test loss: 0.703
+[12,    25] test loss: 0.704
+[12,    30] test loss: 0.701
+[12,    35] test loss: 0.709
+[12,    40] test loss: 0.696
+[12,    45] test loss: 0.699
+[12,    50] test loss: 0.695
+[12,    55] test loss: 0.711
+-----------------------------------------------------------------------------------------
+Micro-Precision: 0.2747378647327423, Macro-Precision: nan
+
+Micro-Recall: 0.29790908098220825, Macro-Recall: nan
+
+Micro-F1: 0.285854697227478, Macro-F1: nan
+
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+| end of epoch  11 | time: 132.47s | valid loss  0.71 | valid ppl     2.04
+-----------------------------------------------------------------------------------------
+[13,     5] train loss: 0.716
+[13,    10] train loss: 0.707
+[13,    15] train loss: 0.711
+[13,    20] train loss: 0.708
+[13,    25] train loss: 0.706
+[13,    30] train loss: 0.712
+[13,    35] train loss: 0.700
+[13,    40] train loss: 0.702
+[13,    45] train loss: 0.717
+[13,    50] train loss: 0.703
+[13,    55] train loss: 0.708
+[13,    60] train loss: 0.705
+[13,    65] train loss: 0.710
+[13,    70] train loss: 0.703
+[13,    75] train loss: 0.702
+[13,    80] train loss: 0.721
+[13,    85] train loss: 0.721
+[13,    90] train loss: 0.697
+[13,    95] train loss: 0.712
+[13,   100] train loss: 0.708
+[13,   105] train loss: 0.710
+[13,   110] train loss: 0.713
+[13,   115] train loss: 0.704
+[13,   120] train loss: 0.709
+[13,   125] train loss: 0.706
+[13,   130] train loss: 0.697
+[13,   135] train loss: 0.706
+[13,   140] train loss: 0.701
+[13,   145] train loss: 0.705
+[13,   150] train loss: 0.708
+[13,   155] train loss: 0.706
+[13,   160] train loss: 0.699
+[13,   165] train loss: 0.699
+Finished Training
+[13,     5] test loss: 0.687
+[13,    10] test loss: 0.710
+[13,    15] test loss: 0.688
+[13,    20] test loss: 0.698
+[13,    25] test loss: 0.694
+[13,    30] test loss: 0.690
+[13,    35] test loss: 0.710
+[13,    40] test loss: 0.709
+[13,    45] test loss: 0.679
+[13,    50] test loss: 0.710
+[13,    55] test loss: 0.682
+-----------------------------------------------------------------------------------------
+Micro-Precision: 0.28007766604423523, Macro-Precision: nan
+
+Micro-Recall: 0.31242865324020386, Macro-Recall: nan
+
+Micro-F1: 0.2953699827194214, Macro-F1: nan
+
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+| end of epoch  12 | time: 133.47s | valid loss  0.71 | valid ppl     2.03
+-----------------------------------------------------------------------------------------
+[14,     5] train loss: 0.694
+[14,    10] train loss: 0.696
+[14,    15] train loss: 0.712
+[14,    20] train loss: 0.704
+[14,    25] train loss: 0.695
+[14,    30] train loss: 0.700
+[14,    35] train loss: 0.699
+[14,    40] train loss: 0.698
+[14,    45] train loss: 0.701
+[14,    50] train loss: 0.701
+[14,    55] train loss: 0.708
+[14,    60] train loss: 0.701
+[14,    65] train loss: 0.694
+[14,    70] train loss: 0.720
+[14,    75] train loss: 0.717
+[14,    80] train loss: 0.697
+[14,    85] train loss: 0.699
+[14,    90] train loss: 0.692
+[14,    95] train loss: 0.715
+[14,   100] train loss: 0.709
+[14,   105] train loss: 0.693
+[14,   110] train loss: 0.697
+[14,   115] train loss: 0.691
+[14,   120] train loss: 0.690
+[14,   125] train loss: 0.699
+[14,   130] train loss: 0.693
+[14,   135] train loss: 0.697
+[14,   140] train loss: 0.695
+[14,   145] train loss: 0.701
+[14,   150] train loss: 0.694
+[14,   155] train loss: 0.710
+[14,   160] train loss: 0.684
+[14,   165] train loss: 0.693
+Finished Training
+[14,     5] test loss: 0.685
+[14,    10] test loss: 0.689
+[14,    15] test loss: 0.692
+[14,    20] test loss: 0.688
+[14,    25] test loss: 0.692
+[14,    30] test loss: 0.692
+[14,    35] test loss: 0.685
+[14,    40] test loss: 0.691
+[14,    45] test loss: 0.683
+[14,    50] test loss: 0.696
+[14,    55] test loss: 0.691
+-----------------------------------------------------------------------------------------
+Micro-Precision: 0.28650838136672974, Macro-Precision: nan
+
+Micro-Recall: 0.31147757172584534, Macro-Recall: nan
+
+Micro-F1: 0.29847168922424316, Macro-F1: nan
+
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+| end of epoch  13 | time: 132.61s | valid loss  0.70 | valid ppl     2.02
+-----------------------------------------------------------------------------------------
+[15,     5] train loss: 0.683
+[15,    10] train loss: 0.692
+[15,    15] train loss: 0.688
+[15,    20] train loss: 0.685
+[15,    25] train loss: 0.691
+[15,    30] train loss: 0.694
+[15,    35] train loss: 0.689
+[15,    40] train loss: 0.706
+[15,    45] train loss: 0.699
+[15,    50] train loss: 0.688
+[15,    55] train loss: 0.691
+[15,    60] train loss: 0.686
+[15,    65] train loss: 0.695
+[15,    70] train loss: 0.685
+[15,    75] train loss: 0.692
+[15,    80] train loss: 0.687
+[15,    85] train loss: 0.694
+[15,    90] train loss: 0.704
+[15,    95] train loss: 0.684
+[15,   100] train loss: 0.691
+[15,   105] train loss: 0.698
+[15,   110] train loss: 0.692
+[15,   115] train loss: 0.694
+[15,   120] train loss: 0.693
+[15,   125] train loss: 0.681
+[15,   130] train loss: 0.698
+[15,   135] train loss: 0.696
+[15,   140] train loss: 0.698
+[15,   145] train loss: 0.688
+[15,   150] train loss: 0.693
+[15,   155] train loss: 0.694
+[15,   160] train loss: 0.691
+[15,   165] train loss: 0.693
+Finished Training
+[15,     5] test loss: 0.686
+[15,    10] test loss: 0.679
+[15,    15] test loss: 0.681
+[15,    20] test loss: 0.677
+[15,    25] test loss: 0.685
+[15,    30] test loss: 0.687
+[15,    35] test loss: 0.684
+[15,    40] test loss: 0.676
+[15,    45] test loss: 0.692
+[15,    50] test loss: 0.682
+[15,    55] test loss: 0.693
+-----------------------------------------------------------------------------------------
+Micro-Precision: 0.29343390464782715, Macro-Precision: nan
+
+Micro-Recall: 0.3136093020439148, Macro-Recall: nan
+
+Micro-F1: 0.3031863272190094, Macro-F1: nan
+
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+| end of epoch  14 | time: 131.88s | valid loss  0.70 | valid ppl     2.01
+-----------------------------------------------------------------------------------------
+[16,     5] train loss: 0.693
+[16,    10] train loss: 0.683
+[16,    15] train loss: 0.678
+[16,    20] train loss: 0.698
+[16,    25] train loss: 0.678
+[16,    30] train loss: 0.686
+[16,    35] train loss: 0.680
+[16,    40] train loss: 0.695
+[16,    45] train loss: 0.689
+[16,    50] train loss: 0.676
+[16,    55] train loss: 0.699
+[16,    60] train loss: 0.678
+[16,    65] train loss: 0.677
+[16,    70] train loss: 0.684
+[16,    75] train loss: 0.691
+[16,    80] train loss: 0.687
+[16,    85] train loss: 0.690
+[16,    90] train loss: 0.691
+[16,    95] train loss: 0.688
+[16,   100] train loss: 0.671
+[16,   105] train loss: 0.688
+[16,   110] train loss: 0.689
+[16,   115] train loss: 0.696
+[16,   120] train loss: 0.692
+[16,   125] train loss: 0.692
+[16,   130] train loss: 0.672
+[16,   135] train loss: 0.693
+[16,   140] train loss: 0.676
+[16,   145] train loss: 0.682
+[16,   150] train loss: 0.679
+[16,   155] train loss: 0.688
+[16,   160] train loss: 0.677
+[16,   165] train loss: 0.680
+Finished Training
+[16,     5] test loss: 0.677
+[16,    10] test loss: 0.684
+[16,    15] test loss: 0.682
+[16,    20] test loss: 0.688
+[16,    25] test loss: 0.672
+[16,    30] test loss: 0.669
+[16,    35] test loss: 0.682
+[16,    40] test loss: 0.680
+[16,    45] test loss: 0.673
+[16,    50] test loss: 0.668
+[16,    55] test loss: 0.690
+-----------------------------------------------------------------------------------------
+Micro-Precision: 0.299079954624176, Macro-Precision: nan
+
+Micro-Recall: 0.32343730330467224, Macro-Recall: nan
+
+Micro-F1: 0.31078213453292847, Macro-F1: nan
+
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+| end of epoch  15 | time: 132.36s | valid loss  0.69 | valid ppl     2.00
+-----------------------------------------------------------------------------------------
+[17,     5] train loss: 0.683
+[17,    10] train loss: 0.687
+[17,    15] train loss: 0.690
+[17,    20] train loss: 0.680
+[17,    25] train loss: 0.681
+[17,    30] train loss: 0.683
+[17,    35] train loss: 0.678
+[17,    40] train loss: 0.687
+[17,    45] train loss: 0.678
+[17,    50] train loss: 0.683
+[17,    55] train loss: 0.679
+[17,    60] train loss: 0.677
+[17,    65] train loss: 0.685
+[17,    70] train loss: 0.678
+[17,    75] train loss: 0.664
+[17,    80] train loss: 0.677
+[17,    85] train loss: 0.678
+[17,    90] train loss: 0.677
+[17,    95] train loss: 0.686
+[17,   100] train loss: 0.674
+[17,   105] train loss: 0.675
+[17,   110] train loss: 0.676
+[17,   115] train loss: 0.678
+[17,   120] train loss: 0.689
+[17,   125] train loss: 0.683
+[17,   130] train loss: 0.671
+[17,   135] train loss: 0.671
+[17,   140] train loss: 0.680
+[17,   145] train loss: 0.684
+[17,   150] train loss: 0.678
+[17,   155] train loss: 0.676
+[17,   160] train loss: 0.668
+[17,   165] train loss: 0.666
+Finished Training
+[17,     5] test loss: 0.682
+[17,    10] test loss: 0.691
+[17,    15] test loss: 0.662
+[17,    20] test loss: 0.676
+[17,    25] test loss: 0.664
+[17,    30] test loss: 0.684
+[17,    35] test loss: 0.675
+[17,    40] test loss: 0.668
+[17,    45] test loss: 0.676
+[17,    50] test loss: 0.666
+[17,    55] test loss: 0.681
+-----------------------------------------------------------------------------------------
+Micro-Precision: 0.30240902304649353, Macro-Precision: nan
+
+Micro-Recall: 0.3280271589756012, Macro-Recall: nan
+
+Micro-F1: 0.31469759345054626, Macro-F1: nan
+
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+| end of epoch  16 | time: 132.31s | valid loss  0.69 | valid ppl     1.99
+-----------------------------------------------------------------------------------------
+[18,     5] train loss: 0.677
+[18,    10] train loss: 0.674
+[18,    15] train loss: 0.677
+[18,    20] train loss: 0.673
+[18,    25] train loss: 0.670
+[18,    30] train loss: 0.672
+[18,    35] train loss: 0.679
+[18,    40] train loss: 0.673
+[18,    45] train loss: 0.674
+[18,    50] train loss: 0.678
+[18,    55] train loss: 0.677
+[18,    60] train loss: 0.653
+[18,    65] train loss: 0.675
+[18,    70] train loss: 0.674
+[18,    75] train loss: 0.674
+[18,    80] train loss: 0.676
+[18,    85] train loss: 0.664
+[18,    90] train loss: 0.678
+[18,    95] train loss: 0.680
+[18,   100] train loss: 0.667
+[18,   105] train loss: 0.673
+[18,   110] train loss: 0.663
+[18,   115] train loss: 0.677
+[18,   120] train loss: 0.672
+[18,   125] train loss: 0.684
+[18,   130] train loss: 0.676
+[18,   135] train loss: 0.665
+[18,   140] train loss: 0.663
+[18,   145] train loss: 0.664
+[18,   150] train loss: 0.670
+[18,   155] train loss: 0.672
+[18,   160] train loss: 0.675
+[18,   165] train loss: 0.665
+Finished Training
+[18,     5] test loss: 0.673
+[18,    10] test loss: 0.677
+[18,    15] test loss: 0.678
+[18,    20] test loss: 0.668
+[18,    25] test loss: 0.657
+[18,    30] test loss: 0.666
+[18,    35] test loss: 0.671
+[18,    40] test loss: 0.664
+[18,    45] test loss: 0.677
+[18,    50] test loss: 0.681
+[18,    55] test loss: 0.666
+-----------------------------------------------------------------------------------------
+Micro-Precision: 0.3061607778072357, Macro-Precision: nan
+
+Micro-Recall: 0.33165550231933594, Macro-Recall: nan
+
+Micro-F1: 0.3183985948562622, Macro-F1: nan
+
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+| end of epoch  17 | time: 131.92s | valid loss  0.68 | valid ppl     1.98
+-----------------------------------------------------------------------------------------
+[19,     5] train loss: 0.671
+[19,    10] train loss: 0.665
+[19,    15] train loss: 0.675
+[19,    20] train loss: 0.675
+[19,    25] train loss: 0.653
+[19,    30] train loss: 0.662
+[19,    35] train loss: 0.679
+[19,    40] train loss: 0.672
+[19,    45] train loss: 0.659
+[19,    50] train loss: 0.670
+[19,    55] train loss: 0.664
+[19,    60] train loss: 0.676
+[19,    65] train loss: 0.668
+[19,    70] train loss: 0.672
+[19,    75] train loss: 0.657
+[19,    80] train loss: 0.657
+[19,    85] train loss: 0.671
+[19,    90] train loss: 0.669
+[19,    95] train loss: 0.659
+[19,   100] train loss: 0.676
+[19,   105] train loss: 0.668
+[19,   110] train loss: 0.660
+[19,   115] train loss: 0.677
+[19,   120] train loss: 0.656
+[19,   125] train loss: 0.662
+[19,   130] train loss: 0.663
+[19,   135] train loss: 0.665
+[19,   140] train loss: 0.671
+[19,   145] train loss: 0.667
+[19,   150] train loss: 0.667
+[19,   155] train loss: 0.658
+[19,   160] train loss: 0.665
+[19,   165] train loss: 0.662
+Finished Training
+[19,     5] test loss: 0.656
+[19,    10] test loss: 0.661
+[19,    15] test loss: 0.693
+[19,    20] test loss: 0.669
+[19,    25] test loss: 0.680
+[19,    30] test loss: 0.666
+[19,    35] test loss: 0.661
+[19,    40] test loss: 0.663
+[19,    45] test loss: 0.655
+[19,    50] test loss: 0.665
+[19,    55] test loss: 0.669
+-----------------------------------------------------------------------------------------
+Micro-Precision: 0.31121981143951416, Macro-Precision: nan
+
+Micro-Recall: 0.3434930145740509, Macro-Recall: nan
+
+Micro-F1: 0.32656100392341614, Macro-F1: nan
+
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+| end of epoch  18 | time: 132.70s | valid loss  0.68 | valid ppl     1.97
+-----------------------------------------------------------------------------------------
+[20,     5] train loss: 0.666
+[20,    10] train loss: 0.649
+[20,    15] train loss: 0.681
+[20,    20] train loss: 0.661
+[20,    25] train loss: 0.667
+[20,    30] train loss: 0.664
+[20,    35] train loss: 0.671
+[20,    40] train loss: 0.649
+[20,    45] train loss: 0.664
+[20,    50] train loss: 0.649
+[20,    55] train loss: 0.646
+[20,    60] train loss: 0.675
+[20,    65] train loss: 0.652
+[20,    70] train loss: 0.659
+[20,    75] train loss: 0.660
+[20,    80] train loss: 0.658
+[20,    85] train loss: 0.652
+[20,    90] train loss: 0.650
+[20,    95] train loss: 0.667
+[20,   100] train loss: 0.664
+[20,   105] train loss: 0.677
+[20,   110] train loss: 0.651
+[20,   115] train loss: 0.658
+[20,   120] train loss: 0.654
+[20,   125] train loss: 0.651
+[20,   130] train loss: 0.665
+[20,   135] train loss: 0.673
+[20,   140] train loss: 0.656
+[20,   145] train loss: 0.661
+[20,   150] train loss: 0.658
+[20,   155] train loss: 0.668
+[20,   160] train loss: 0.660
+[20,   165] train loss: 0.659
+Finished Training
+[20,     5] test loss: 0.654
+[20,    10] test loss: 0.676
+[20,    15] test loss: 0.666
+[20,    20] test loss: 0.658
+[20,    25] test loss: 0.664
+[20,    30] test loss: 0.663
+[20,    35] test loss: 0.668
+[20,    40] test loss: 0.662
+[20,    45] test loss: 0.650
+[20,    50] test loss: 0.673
+[20,    55] test loss: 0.662
+-----------------------------------------------------------------------------------------
+Micro-Precision: 0.31175002455711365, Macro-Precision: nan
+
+Micro-Recall: 0.3341429829597473, Macro-Recall: nan
+
+Micro-F1: 0.32255831360816956, Macro-F1: nan
+
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+| end of epoch  19 | time: 131.52s | valid loss  0.68 | valid ppl     1.97
+-----------------------------------------------------------------------------------------
+[21,     5] train loss: 0.654
+[21,    10] train loss: 0.664
+[21,    15] train loss: 0.651
+[21,    20] train loss: 0.660
+[21,    25] train loss: 0.650
+[21,    30] train loss: 0.663
+[21,    35] train loss: 0.652
+[21,    40] train loss: 0.651
+[21,    45] train loss: 0.662
+[21,    50] train loss: 0.653
+[21,    55] train loss: 0.658
+[21,    60] train loss: 0.659
+[21,    65] train loss: 0.655
+[21,    70] train loss: 0.652
+[21,    75] train loss: 0.654
+[21,    80] train loss: 0.646
+[21,    85] train loss: 0.656
+[21,    90] train loss: 0.668
+[21,    95] train loss: 0.661
+[21,   100] train loss: 0.656
+[21,   105] train loss: 0.658
+[21,   110] train loss: 0.652
+[21,   115] train loss: 0.645
+[21,   120] train loss: 0.652
+[21,   125] train loss: 0.655
+[21,   130] train loss: 0.643
+[21,   135] train loss: 0.654
+[21,   140] train loss: 0.655
+[21,   145] train loss: 0.663
+[21,   150] train loss: 0.654
+[21,   155] train loss: 0.647
+[21,   160] train loss: 0.656
+[21,   165] train loss: 0.658
+Finished Training
+[21,     5] test loss: 0.659
+[21,    10] test loss: 0.657
+[21,    15] test loss: 0.651
+[21,    20] test loss: 0.649
+[21,    25] test loss: 0.668
+[21,    30] test loss: 0.668
+[21,    35] test loss: 0.658
+[21,    40] test loss: 0.661
+[21,    45] test loss: 0.668
+[21,    50] test loss: 0.663
+[21,    55] test loss: 0.652
+-----------------------------------------------------------------------------------------
+Micro-Precision: 0.3161904215812683, Macro-Precision: nan
+
+Micro-Recall: 0.3169907331466675, Macro-Recall: nan
+
+Micro-F1: 0.3165900707244873, Macro-F1: nan
+
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+| end of epoch  20 | time: 130.96s | valid loss  0.67 | valid ppl     1.96
+-----------------------------------------------------------------------------------------
+[22,     5] train loss: 0.642
+[22,    10] train loss: 0.653
+[22,    15] train loss: 0.654
+[22,    20] train loss: 0.650
+[22,    25] train loss: 0.647
+[22,    30] train loss: 0.655
+[22,    35] train loss: 0.652
+[22,    40] train loss: 0.663
+[22,    45] train loss: 0.653
+[22,    50] train loss: 0.638
+[22,    55] train loss: 0.657
+[22,    60] train loss: 0.640
+[22,    65] train loss: 0.645
+[22,    70] train loss: 0.650
+[22,    75] train loss: 0.647
+[22,    80] train loss: 0.641
+[22,    85] train loss: 0.647
+[22,    90] train loss: 0.658
+[22,    95] train loss: 0.651
+[22,   100] train loss: 0.640
+[22,   105] train loss: 0.658
+[22,   110] train loss: 0.657
+[22,   115] train loss: 0.645
+[22,   120] train loss: 0.641
+[22,   125] train loss: 0.657
+[22,   130] train loss: 0.643
+[22,   135] train loss: 0.643
+[22,   140] train loss: 0.654
+[22,   145] train loss: 0.660
+[22,   150] train loss: 0.658
+[22,   155] train loss: 0.650
+[22,   160] train loss: 0.650
+[22,   165] train loss: 0.654
+Finished Training
+[22,     5] test loss: 0.671
+[22,    10] test loss: 0.647
+[22,    15] test loss: 0.663
+[22,    20] test loss: 0.662
+[22,    25] test loss: 0.661
+[22,    30] test loss: 0.643
+[22,    35] test loss: 0.655
+[22,    40] test loss: 0.648
+[22,    45] test loss: 0.654
+[22,    50] test loss: 0.655
+[22,    55] test loss: 0.657
+-----------------------------------------------------------------------------------------
+Micro-Precision: 0.3197754919528961, Macro-Precision: nan
+
+Micro-Recall: 0.33427947759628296, Macro-Recall: nan
+
+Micro-F1: 0.32686668634414673, Macro-F1: nan
+
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+| end of epoch  21 | time: 131.85s | valid loss  0.67 | valid ppl     1.95
+-----------------------------------------------------------------------------------------
+[23,     5] train loss: 0.652
+[23,    10] train loss: 0.642
+[23,    15] train loss: 0.644
+[23,    20] train loss: 0.644
+[23,    25] train loss: 0.647
+[23,    30] train loss: 0.652
+[23,    35] train loss: 0.648
+[23,    40] train loss: 0.649
+[23,    45] train loss: 0.635
+[23,    50] train loss: 0.643
+[23,    55] train loss: 0.642
+[23,    60] train loss: 0.645
+[23,    65] train loss: 0.644
+[23,    70] train loss: 0.644
+[23,    75] train loss: 0.639
+[23,    80] train loss: 0.650
+[23,    85] train loss: 0.651
+[23,    90] train loss: 0.650
+[23,    95] train loss: 0.644
+[23,   100] train loss: 0.642
+[23,   105] train loss: 0.650
+[23,   110] train loss: 0.644
+[23,   115] train loss: 0.635
+[23,   120] train loss: 0.642
+[23,   125] train loss: 0.649
+[23,   130] train loss: 0.647
+[23,   135] train loss: 0.632
+[23,   140] train loss: 0.650
+[23,   145] train loss: 0.645
+[23,   150] train loss: 0.636
+[23,   155] train loss: 0.655
+[23,   160] train loss: 0.636
+[23,   165] train loss: 0.638
+Finished Training
+[23,     5] test loss: 0.650
+[23,    10] test loss: 0.659
+[23,    15] test loss: 0.660
+[23,    20] test loss: 0.647
+[23,    25] test loss: 0.646
+[23,    30] test loss: 0.642
+[23,    35] test loss: 0.654
+[23,    40] test loss: 0.647
+[23,    45] test loss: 0.662
+[23,    50] test loss: 0.661
+[23,    55] test loss: 0.647
+-----------------------------------------------------------------------------------------
+Micro-Precision: 0.32210490107536316, Macro-Precision: nan
+
+Micro-Recall: 0.3285241723060608, Macro-Recall: nan
+
+Micro-F1: 0.32528287172317505, Macro-F1: nan
+
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+| end of epoch  22 | time: 131.62s | valid loss  0.66 | valid ppl     1.94
+-----------------------------------------------------------------------------------------
+[24,     5] train loss: 0.642
+[24,    10] train loss: 0.634
+[24,    15] train loss: 0.642
+[24,    20] train loss: 0.630
+[24,    25] train loss: 0.646
+[24,    30] train loss: 0.646
+[24,    35] train loss: 0.653
+[24,    40] train loss: 0.645
+[24,    45] train loss: 0.635
+[24,    50] train loss: 0.634
+[24,    55] train loss: 0.650
+[24,    60] train loss: 0.649
+[24,    65] train loss: 0.639
+[24,    70] train loss: 0.647
+[24,    75] train loss: 0.636
+[24,    80] train loss: 0.635
+[24,    85] train loss: 0.642
+[24,    90] train loss: 0.640
+[24,    95] train loss: 0.630
+[24,   100] train loss: 0.632
+[24,   105] train loss: 0.632
+[24,   110] train loss: 0.645
+[24,   115] train loss: 0.646
+[24,   120] train loss: 0.649
+[24,   125] train loss: 0.643
+[24,   130] train loss: 0.636
+[24,   135] train loss: 0.636
+[24,   140] train loss: 0.638
+[24,   145] train loss: 0.637
+[24,   150] train loss: 0.647
+[24,   155] train loss: 0.632
+[24,   160] train loss: 0.625
+[24,   165] train loss: 0.645
+Finished Training
+[24,     5] test loss: 0.664
+[24,    10] test loss: 0.654
+[24,    15] test loss: 0.650
+[24,    20] test loss: 0.643
+[24,    25] test loss: 0.657
+[24,    30] test loss: 0.637
+[24,    35] test loss: 0.653
+[24,    40] test loss: 0.648
+[24,    45] test loss: 0.647
+[24,    50] test loss: 0.645
+[24,    55] test loss: 0.649
+-----------------------------------------------------------------------------------------
+Micro-Precision: 0.3219105303287506, Macro-Precision: nan
+
+Micro-Recall: 0.3410201668739319, Macro-Recall: nan
+
+Micro-F1: 0.33118993043899536, Macro-F1: nan
+
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+| end of epoch  23 | time: 131.74s | valid loss  0.66 | valid ppl     1.94
+-----------------------------------------------------------------------------------------
+[25,     5] train loss: 0.635
+[25,    10] train loss: 0.630
+[25,    15] train loss: 0.627
+[25,    20] train loss: 0.628
+[25,    25] train loss: 0.647
+[25,    30] train loss: 0.631
+[25,    35] train loss: 0.632
+[25,    40] train loss: 0.633
+[25,    45] train loss: 0.628
+[25,    50] train loss: 0.642
+[25,    55] train loss: 0.642
+[25,    60] train loss: 0.634
+[25,    65] train loss: 0.638
+[25,    70] train loss: 0.647
+[25,    75] train loss: 0.632
+[25,    80] train loss: 0.639
+[25,    85] train loss: 0.642
+[25,    90] train loss: 0.628
+[25,    95] train loss: 0.633
+[25,   100] train loss: 0.630
+[25,   105] train loss: 0.630
+[25,   110] train loss: 0.634
+[25,   115] train loss: 0.642
+[25,   120] train loss: 0.633
+[25,   125] train loss: 0.621
+[25,   130] train loss: 0.638
+[25,   135] train loss: 0.627
+[25,   140] train loss: 0.636
+[25,   145] train loss: 0.641
+[25,   150] train loss: 0.637
+[25,   155] train loss: 0.639
+[25,   160] train loss: 0.632
+[25,   165] train loss: 0.637
+Finished Training
+[25,     5] test loss: 0.636
+[25,    10] test loss: 0.647
+[25,    15] test loss: 0.645
+[25,    20] test loss: 0.650
+[25,    25] test loss: 0.656
+[25,    30] test loss: 0.652
+[25,    35] test loss: 0.651
+[25,    40] test loss: 0.644
+[25,    45] test loss: 0.648
+[25,    50] test loss: 0.636
+[25,    55] test loss: 0.649
+-----------------------------------------------------------------------------------------
+Micro-Precision: 0.3263283669948578, Macro-Precision: nan
+
+Micro-Recall: 0.35173100233078003, Macro-Recall: nan
+
+Micro-F1: 0.33855384588241577, Macro-F1: nan
+
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+| end of epoch  24 | time: 131.78s | valid loss  0.66 | valid ppl     1.93
+-----------------------------------------------------------------------------------------

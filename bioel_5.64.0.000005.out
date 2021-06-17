@@ -1,0 +1,41 @@
+Restoring modules from user's fosscuda111, for system: "farnam-rhel7"
+/home/vs428/project/MedMentions/full/pretraining5/entity_vocab.jsonl
+Some weights of the model checkpoint at microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract were not used when initializing BertModel: ['cls.predictions.transform.dense.bias', 'cls.predictions.decoder.bias', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.dense.weight', 'cls.predictions.transform.LayerNorm.weight', 'cls.seq_relationship.bias', 'cls.predictions.bias', 'cls.predictions.decoder.weight', 'cls.seq_relationship.weight']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+0
+<torch.cuda.device object at 0x2b0dc4bb2b20>
+1
+GeForce GTX 1080 Ti
+Traceback (most recent call last):
+  File "train.py", line 117, in <module>
+    train(model, train_dataloader, optimizer, mention_entity_loss, epoch, pretrained_entity_embeddings, device)
+  File "/gpfs/ysm/home/vs428/Documents/entity_linking/biomedical_el/entitylinker/train_utils.py", line 255, in train
+    mention_pred, entity_pred = model(input_ids,token_type_ids,attention_mask)
+  File "/gpfs/ysm/project/rtaylor/vs428/conda_envs/biomed_el111/lib/python3.8/site-packages/torch/nn/modules/module.py", line 889, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/gpfs/ysm/home/vs428/Documents/entity_linking/biomedical_el/entitylinker/model.py", line 117, in forward
+    outputs = self.pretrained_model(word_ids, token_type_ids, attention_mask)
+  File "/gpfs/ysm/project/rtaylor/vs428/conda_envs/biomed_el111/lib/python3.8/site-packages/torch/nn/modules/module.py", line 889, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/gpfs/ysm/project/rtaylor/vs428/conda_envs/biomed_el111/lib/python3.8/site-packages/transformers/models/bert/modeling_bert.py", line 971, in forward
+    encoder_outputs = self.encoder(
+  File "/gpfs/ysm/project/rtaylor/vs428/conda_envs/biomed_el111/lib/python3.8/site-packages/torch/nn/modules/module.py", line 889, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/gpfs/ysm/project/rtaylor/vs428/conda_envs/biomed_el111/lib/python3.8/site-packages/transformers/models/bert/modeling_bert.py", line 568, in forward
+    layer_outputs = layer_module(
+  File "/gpfs/ysm/project/rtaylor/vs428/conda_envs/biomed_el111/lib/python3.8/site-packages/torch/nn/modules/module.py", line 889, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/gpfs/ysm/project/rtaylor/vs428/conda_envs/biomed_el111/lib/python3.8/site-packages/transformers/models/bert/modeling_bert.py", line 496, in forward
+    layer_output = apply_chunking_to_forward(
+  File "/gpfs/ysm/project/rtaylor/vs428/conda_envs/biomed_el111/lib/python3.8/site-packages/transformers/modeling_utils.py", line 1995, in apply_chunking_to_forward
+    return forward_fn(*input_tensors)
+  File "/gpfs/ysm/project/rtaylor/vs428/conda_envs/biomed_el111/lib/python3.8/site-packages/transformers/models/bert/modeling_bert.py", line 508, in feed_forward_chunk
+    intermediate_output = self.intermediate(attention_output)
+  File "/gpfs/ysm/project/rtaylor/vs428/conda_envs/biomed_el111/lib/python3.8/site-packages/torch/nn/modules/module.py", line 889, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/gpfs/ysm/project/rtaylor/vs428/conda_envs/biomed_el111/lib/python3.8/site-packages/transformers/models/bert/modeling_bert.py", line 412, in forward
+    hidden_states = self.intermediate_act_fn(hidden_states)
+  File "/gpfs/ysm/project/rtaylor/vs428/conda_envs/biomed_el111/lib/python3.8/site-packages/torch/nn/functional.py", line 1459, in gelu
+    return torch._C._nn.gelu(input)
+RuntimeError: CUDA out of memory. Tried to allocate 286.00 MiB (GPU 0; 10.92 GiB total capacity; 9.82 GiB already allocated; 245.44 MiB free; 9.95 GiB reserved in total by PyTorch)
