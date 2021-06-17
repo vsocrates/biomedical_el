@@ -7,6 +7,9 @@ import torch.nn.functional as F
 from torch import autograd
 
 import numpy as np 
+import time
+import math 
+
 
 from entitylinker.model_utils import *
 from entitylinker.train_utils import *
@@ -14,6 +17,8 @@ from entitylinker.train_utils import *
 from entitylinker.dataset import MedMentionsDataset, Collater
 from entitylinker.model import EntityLinker
 
+import transformers
+from transformers import get_linear_schedule_with_warmup,get_cosine_schedule_with_warmup,get_constant_schedule_with_warmup,get_constant_schedule
 
 import argparse
 
@@ -30,6 +35,8 @@ parser.add_argument('--batch-size', help="batch size of training", default=16, t
 parser.add_argument('--lr', help="learning rate", default=0.00002, type=float)
 parser.add_argument('--max-length', help="max input length of BERT model", default=128, type=int)
 parser.add_argument('--num-epochs', help="number of epochs to train", default=20, type=int)
+parser.add_argument("--lr-scheduler", help="Learning rate scheduler", choices=['linear', 'cosine', 'warmup', 'constant'])
+parser.add_argument("--num-warmup-steps", help="number of warmup steps for scheduler", default=50)
 parser.add_argument('--cuda', action='store_true', help='use cuda?')
 
 args = parser.parse_args()
@@ -67,6 +74,7 @@ entity_embedding_metadata = args.luke_metadata
 
 MAX_LENGTH = args.max_length
 MODEL_NAME = args.bert_model_name
+num_epochs = args.num_epochs
 
 
 # Create Tokenizer and DataLoader
@@ -104,12 +112,18 @@ model.to(device)
 
 
 optimizer = optim.Adam(model.parameters(), lr=args.lr)    
+total_training_steps = num_epochs * len(train_dataloader)
+
+if args.lr_scheduler == 'linear':
+    optimizer = get_linear_schedule_with_warmup(optimizer, num_warmup_steps=args.num_warmup_steps, num_training_steps=total_training_steps)
+elif args.lr_scheduler == 'cosine':
+    optimizer = get_cosine_schedule_with_warmup(optimizer, num_warmup_steps=args.num_warmup_steps, num_training_steps=total_training_steps)
+elif args.lr_scheduler == 'warmup':
+    optimizer = get_constant_schedule_with_warmup(optimizer, num_warmup_steps=args.num_warmup_steps)
+elif args.lr_scheduler == 'constant':
+    optimizer = get_constant_schedule(optimizer)
 
 
-
-num_epochs = args.num_epochs
-import time
-import math 
 
 # try:
 for epoch in range(num_epochs):  # loop over the dataset multiple times
