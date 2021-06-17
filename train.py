@@ -36,7 +36,7 @@ parser.add_argument('--lr', help="learning rate", default=0.00002, type=float)
 parser.add_argument('--max-length', help="max input length of BERT model", default=128, type=int)
 parser.add_argument('--num-epochs', help="number of epochs to train", default=20, type=int)
 parser.add_argument("--lr-scheduler", help="Learning rate scheduler", choices=['linear', 'cosine', 'warmup', 'constant'])
-parser.add_argument("--num-warmup-steps", help="number of warmup steps for scheduler", default=50)
+parser.add_argument("--num-warmup-steps", help="number of warmup steps for scheduler", default=50, type=int)
 parser.add_argument('--cuda', action='store_true', help='use cuda?')
 
 args = parser.parse_args()
@@ -115,13 +115,13 @@ optimizer = optim.Adam(model.parameters(), lr=args.lr)
 total_training_steps = num_epochs * len(train_dataloader)
 
 if args.lr_scheduler == 'linear':
-    optimizer = get_linear_schedule_with_warmup(optimizer, num_warmup_steps=args.num_warmup_steps, num_training_steps=total_training_steps)
+    scheduler = get_linear_schedule_with_warmup(optimizer, num_warmup_steps=args.num_warmup_steps, num_training_steps=total_training_steps)
 elif args.lr_scheduler == 'cosine':
-    optimizer = get_cosine_schedule_with_warmup(optimizer, num_warmup_steps=args.num_warmup_steps, num_training_steps=total_training_steps)
+    scheduler = get_cosine_schedule_with_warmup(optimizer, num_warmup_steps=args.num_warmup_steps, num_training_steps=total_training_steps)
 elif args.lr_scheduler == 'warmup':
-    optimizer = get_constant_schedule_with_warmup(optimizer, num_warmup_steps=args.num_warmup_steps)
+    scheduler = get_constant_schedule_with_warmup(optimizer, num_warmup_steps=args.num_warmup_steps)
 elif args.lr_scheduler == 'constant':
-    optimizer = get_constant_schedule(optimizer)
+    scheduler = get_constant_schedule(optimizer)
 
 
 

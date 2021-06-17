@@ -1,14 +1,14 @@
 #!/bin/bash
 
-for i in 4 8 16
+batchsize=( 4 8  )
+warmups=( 8000 6000 )
+
+for i in "${!batchsize[@]}"
 do
-	for j in  0.00002 0.0001
+	for schedule in linear cosine warmup
 	do
-		for stringval in pretraining pretraining2 pretraining3 pretraining4
-		do
-			sbatch --job-name=bioel_$stringval.$i.$j --output=bioel_$stringval.$i.$j.out biomed_el_job.slurm $stringval  $i $j 25
-		done
-	done
+		sbatch --job-name=bioel_pretraining4.${batchsize[$i]}.$schedule --output=bioel_pretraining4.${batchsize[$i]}.$schedule.out biomed_el_job.slurm pretraining4 ${batchsize[$i]}  0.0001  50 $schedule ${warmups[$i]}
+	done 
 done
 
 

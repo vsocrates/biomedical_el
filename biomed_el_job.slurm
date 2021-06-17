@@ -13,6 +13,8 @@ PRETRAIN_NUM=$1
 BATCH_SIZE=$2 
 LR=$3
 NUM_EPOCHS=$4
+SCHEDULER=$5 
+WARMUP_STEPS=$6 
 
 module restore fosscuda111
 
@@ -27,4 +29,5 @@ python train.py --input-data-file "/home/vs428/project/MedMentions/full/data/cor
 		--entity-vocab "/home/vs428/project/MedMentions/full/$PRETRAIN_NUM/entity_vocab.jsonl" \
 		--luke-model "/home/vs428/project/MedMentions/full/$PRETRAIN_NUM/model_epoch20.bin" \
 		--luke-metadata "/home/vs428/project/MedMentions/full/$PRETRAIN_NUM/metadata.json" \
-		--cuda --batch-size $BATCH_SIZE --lr $LR --num-epochs $NUM_EPOCHS 
+		--cuda --batch-size $BATCH_SIZE --lr $LR --num-epochs $NUM_EPOCHS --lr-scheduler $SCHEDULER \
+		--num-warmup-steps $WARMUP_STEPS 
