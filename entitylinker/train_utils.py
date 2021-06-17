@@ -234,7 +234,7 @@ def compute_metrics(metrics, micro_conf, macro_confs):
 
 
 # Train!!
-def train(model, train_loader, optimizer, criterion, epoch, pretrained_entity_embeddings, device):
+def train(model, train_loader, optimizer, criterion, epoch, pretrained_entity_embeddings, device, scheduler):
 
     model.train()
     running_loss = 0.0
@@ -257,7 +257,7 @@ def train(model, train_loader, optimizer, criterion, epoch, pretrained_entity_em
                          pretrained_entity_embeddings, device)
         loss.backward()
         optimizer.step()
-        
+        scheduler.step()
         # print statistics
         running_loss += loss.item()
         if i % 5 == 4:    # print every 2000 mini-batches
@@ -266,7 +266,7 @@ def train(model, train_loader, optimizer, criterion, epoch, pretrained_entity_em
             running_loss = 0.0
     print('Finished Training')
 
-def evaluate(model, test_loader, optimizer, criterion, epoch, pretrained_entity_embeddings, device):
+def evaluate(model, test_loader, criterion, epoch, pretrained_entity_embeddings, device):
     
     model.eval()
     total_loss = 0.0

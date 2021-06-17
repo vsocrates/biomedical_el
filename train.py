@@ -128,8 +128,8 @@ elif args.lr_scheduler == 'constant':
 # try:
 for epoch in range(num_epochs):  # loop over the dataset multiple times
     epoch_start_time = time.time()
-    train(model, train_dataloader, optimizer, mention_entity_loss, epoch, pretrained_entity_embeddings, device)
-    val_loss = evaluate(model, test_dataloader, optimizer, mention_entity_loss, epoch, pretrained_entity_embeddings, device)
+    train(model, train_dataloader, optimizer, mention_entity_loss, epoch, pretrained_entity_embeddings, device, scheduler)
+    val_loss = evaluate(model, test_dataloader, mention_entity_loss, epoch, pretrained_entity_embeddings, device)
     print('-' * 89)
     print('| end of epoch {:3d} | time: {:5.2f}s | valid loss {:5.2f} | valid ppl {:8.2f}'.format(epoch, 
                                       (time.time() - epoch_start_time),
